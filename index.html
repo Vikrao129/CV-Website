@@ -831,7 +831,7 @@
       linkEl.textContent = d.link.label;
       linkEl.style.display = 'inline-block';
       if (d.link.download) {
-        linkEl.setAttribute('download', 'Profitability_Analysis.xlsx');
+        linkEl.setAttribute('download', d.link.filename || (d.title.replace(/[^A-Za-z0-9]+/g, '_') + '.xlsx'));
         linkEl.removeAttribute('target');
       } else {
         linkEl.removeAttribute('download');
